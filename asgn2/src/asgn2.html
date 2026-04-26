@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Assignment 2: Blocky 3D Pig</title>
+  </head>
+
+  <body onload="main()">
+    <p>Surya Pugazhenthi</p>
+    <p>spugazhe@ucsc.edu</p>
+    <p>Notes to Grader:</p>
+    <p>Blocky 3D Pig with transforms, walking animation, poke interaction, and FPS optimization.</p> 
+    <p>I implemented the overall pig body and shape myself, but used OpenCode -- MiniMax 2.5 to help with animation fine-tuning.</p>
+
+    <canvas id="webgl" width="600" height="600">
+      Please use a browser that supports "canvas"
+    </canvas>
+
+    <div id="fps">FPS: --</div>
+
+    <p>
+      Global Rotation X: <input type="range" id="globalRotX" min="-180" max="180" value="0">
+      Global Rotation Y: <input type="range" id="globalRotY" min="-180" max="180" value="0">
+    </p>
+
+    <p>
+      <button id="animBtn">Start Animation</button>
+    </p>
+
+    <p><strong>Front Left Leg:</strong></p>
+    <p>
+      FL Thigh: <input type="range" id="flThigh" min="-60" max="60" value="0">
+      FL Calf: <input type="range" id="flCalf" min="-90" max="0" value="0">
+      FL Hoof: <input type="range" id="flHoof" min="-45" max="45" value="0">
+    </p>
+
+    <p><strong>Front Right Leg:</strong></p>
+    <p>
+      FR Thigh: <input type="range" id="frThigh" min="-60" max="60" value="0">
+      FR Calf: <input type="range" id="frCalf" min="-90" max="0" value="0">
+      FR Hoof: <input type="range" id="frHoof" min="-45" max="45" value="0">
+    </p>
+
+    <p><strong>Back Left Leg:</strong></p>
+    <p>
+      BL Thigh: <input type="range" id="blThigh" min="-60" max="60" value="0">
+      BL Calf: <input type="range" id="blCalf" min="-90" max="0" value="0">
+      BL Hoof: <input type="range" id="blHoof" min="-45" max="45" value="0">
+    </p>
+
+    <p><strong>Back Right Leg:</strong></p>
+    <p>
+      BR Thigh: <input type="range" id="brThigh" min="-60" max="60" value="0">
+      BR Calf: <input type="range" id="brCalf" min="-90" max="0" value="0">
+      BR Hoof: <input type="range" id="brHoof" min="-45" max="45" value="0">
+    </p>
+
+    <p><strong>Tail and Ears:</strong></p>
+    <p>
+      Tail: <input type="range" id="tail" min="-45" max="45" value="20">
+      Ears: <input type="range" id="ears" min="-30" max="30" value="0">
+    </p>
+
+    <p><em>Hold shift and click canvas to poke the pig!</em></p>
+
+    <script src="../lib/cuon-matrix-cse160.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="asgn2.js"></script>
+  </body>
+</html>
