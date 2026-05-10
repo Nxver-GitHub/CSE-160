@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 3 - Virtual World</title>
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: monospace;
+      color: #eee;
+    }
+    #webgl {
+      display: block;
+      border: 2px solid #444;
+      cursor: crosshair;
+    }
+    #hud {
+      margin-top: 8px;
+      font-size: 13px;
+      text-align: center;
+      color: #aaa;
+      user-select: none;
+    }
+    #crosshair {
+      position: absolute;
+      pointer-events: none;
+      font-size: 22px;
+      color: white;
+      text-shadow: 0 0 4px #000;
+      transform: translate(-50%, -50%);
+    }
+    #wrapper { position: relative; }
+    #msg {
+      position: absolute;
+      top: 8px;
+      left: 0; right: 0;
+      text-align: center;
+      font-size: 14px;
+      color: #ffe066;
+      pointer-events: none;
+    }
+    #author {
+      position: fixed;
+      top: 10px;
+      left: 12px;
+      font-family: monospace;
+      font-size: 12px;
+      color: #aaa;
+      line-height: 1.5;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="author">Surya Pugazhenthi<br>suryapugaz1629@gmail.com</div>
+  <div id="wrapper">
+    <canvas id="webgl" width="800" height="600"></canvas>
+    <div id="crosshair">+</div>
+    <div id="msg"></div>
+  </div>
+  <div id="hud">
+    WASD - move | Q/E - rotate | Mouse - look
+    | F - add block | G - delete block
+    | Click canvas to lock mouse
+    | <span id="fps" style="color:#6cf">-- FPS</span>
+    | Gems: <span id="gemcount">0/5</span>
+  </div>
+  <div style="margin-top:6px;font-size:11px;color:#888;font-family:monospace;text-align:center;">
+    Note: camera movement and texture setup assisted by OpenCode + Claude Code.
+  </div>
+
+  <!-- Lib scripts -->
+  <script src="../lib/webgl-utils.js"></script>
+  <script src="../lib/webgl-debug.js"></script>
+  <script src="../lib/cuon-utils.js"></script>
+  <script src="../lib/cuon-matrix.js"></script>
+
+  <!-- App scripts -->
+  <script src="camera.js"></script>
+  <script src="cube.js"></script>
+  <script src="asgn3.js"></script>
+</body>
+</html>
